@@ -9,7 +9,13 @@ require('dotenv').config();
 
 const app = express();
 app.use(bodyParser.json())
-app.use(cors()) 
+app.use(cors({
+    origin: [
+        "http://localhost:5173", // React dev server (for local testing)
+        "https://authentication-nilesh.vercel.app" // deployed frontend
+    ],
+    methods: ["GET", "POST", "PUT", "DELETE"]
+}));
 
 
 // dbConnect()
