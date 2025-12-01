@@ -20,7 +20,7 @@ async function handleSignup(e){
         return handleError('name, email and password are required!');
     }
     try {
-        const url = "https://authenication-app-nileshsinghofficials-projects.vercel.app/auth/signup"
+        const url = "https://authenication-app.vercel.app/auth/signup"
         const response = await fetch(url, {
             method: 'POST',
             headers : {
