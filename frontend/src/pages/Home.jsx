@@ -19,7 +19,7 @@ function Home() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const url = 'https://authenication-app-nileshsinghofficials-projects.vercel.app/product';
+        const url = "https://authenication-app-nileshsinghofficials-projects.vercel.app/product";
         const headers = {
           headers: {
             'Authorization' : JSON.parse(localStorage.getItem('token'))
