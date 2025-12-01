@@ -11,7 +11,7 @@ const app = express();
 app.use(bodyParser.json())
 app.use(cors())
 
-
+dbConnect()
 
 app.use('/auth', AuthRouter)
 app.use('/product', ProductRouter )
@@ -19,7 +19,9 @@ app.use('/product', ProductRouter )
 app.get('/ping', (req, res) =>{
     res.send("PING")
 })
-app.listen(PORT, ()=> {
-    console.log(`Server is running on PORT ${PORT}`)
-    dbConnect()
-})
+// app.listen(PORT, ()=> {
+//     console.log(`Server is running on PORT ${PORT}`)
+//     dbConnect()
+// })
+
+module.exports = app
